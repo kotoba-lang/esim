@@ -141,7 +141,7 @@ requirement, the docstring says that too.
 | | |
 |---|---|
 | Role | capability library |
-| Tests | 25 tests / 152 assertions, all green (`clojure -M:test`) |
+| Tests | 32 tests / 177 assertions, all green (`clojure -M:test`) — including the D6 port separation, asserted structurally |
 | Lint | clj-kondo 0 errors, 0 warnings (`clojure -M:lint`) |
 | EID checksum | not enforced — see above |
 | Operator console (UI/UX) | not yet — siblings ship a `ui.cljc`; this one does not |
