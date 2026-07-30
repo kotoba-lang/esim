@@ -5,14 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # Direct deps.
-      - run: git clone --depth 1 https://github.com/kotoba-lang/phone.git ../phone
-      - run: git clone --depth 1 https://github.com/kotoba-lang/card.git ../card
-      # Transitive: both phone and card carry a ui.cljc built on html + css, so
-      # their :local/root deps must resolve even though this library requires
-      # neither namespace. Omitting them fails at classpath build, not at test.
-      - run: git clone --depth 1 https://github.com/kotoba-lang/html.git ../html
-      - run: git clone --depth 1 https://github.com/kotoba-lang/css.git ../css
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -20,4 +12,9 @@ jobs:
       - uses: DeLaGuardo/setup-clojure@13.4
         with:
           cli: latest
+      # No sibling clones: deps.edn names phone and card by git coordinate, so
+      # this run also proves the library is consumable from outside the monorepo.
+      # It used to clone ../phone ../card ../html ../css, which made CI pass while
+      # cloud-itonami-app could not build a classpath against this library at all.
       - run: clojure -M:test
+      - run: clojure -M:lint
