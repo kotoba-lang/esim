@@ -1,5 +1,5 @@
 (ns kotoba.esim.export-test
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [kotoba.esim :as esim]
             [kotoba.esim.export :as export]))

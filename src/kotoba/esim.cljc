@@ -34,7 +34,7 @@
   reading rather than a quoted requirement, the docstring says so.
 
   Portable (.cljc) across JVM / ClojureScript / SCI / GraalVM."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kotoba.card :as card]
             [kotoba.phone :as phone]))
 

@@ -15,7 +15,7 @@
   and are not expressible as a state transition.
 
   Portable (.cljc) across JVM / ClojureScript / SCI / GraalVM."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def states
   "Profile states. :disabled, :enabled and :deleted are the states an eUICC

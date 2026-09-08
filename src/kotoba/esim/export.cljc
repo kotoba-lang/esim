@@ -14,7 +14,7 @@
   is.
 
   Portable (.cljc) across JVM / ClojureScript / SCI / GraalVM."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kotoba.esim :as esim]))
 
 ;; The CSV and JSON escaping primitives below mirror kotoba-lang/rcs's export,
