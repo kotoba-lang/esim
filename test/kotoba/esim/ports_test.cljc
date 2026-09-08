@@ -17,7 +17,7 @@
   Modelled on kotoba-lang/card's actuation_test, which pins the same kind of
   separation between propose-only ports and post-approval actuation."
   (:require [clojure.set :as set]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [kotoba.esim.ports :as ports]))
 
