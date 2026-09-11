@@ -141,8 +141,8 @@ requirement, the docstring says that too.
 | | |
 |---|---|
 | Role | capability library |
-| Tests | 32 tests / 177 assertions, all green (`clojure -M:test`) — including the D6 port separation, asserted structurally |
-| Lint | clj-kondo 0 errors, 0 warnings (`clojure -M:lint`) |
+| Tests | 32 tests / 177 assertions, all green (`kbb -M:test`) — including the D6 port separation, asserted structurally |
+| Lint | clj-kondo 0 errors, 0 warnings (`kbb -M:lint`) |
 | EID checksum | not enforced — see above |
 | Operator console (UI/UX) | not yet — siblings ship a `ui.cljc`; this one does not |
 | Governed actor | not yet — `cloud-itonami/cloud-itonami-esim` is step 4 of ADR-2607300300 |
@@ -162,8 +162,8 @@ had it.
 ## Development
 
 ```bash
-clojure -M:test     # sibling ../phone and ../card are resolved via :local/root
-clojure -M:lint
+kbb -M:test     # sibling ../phone and ../card are resolved via :local/root
+kbb -M:lint
 ```
 
 ## License
