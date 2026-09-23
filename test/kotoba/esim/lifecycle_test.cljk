@@ -1,5 +1,5 @@
 (ns kotoba.esim.lifecycle-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kotoba.esim :as esim]
             [kotoba.esim.lifecycle :as lc]))
 

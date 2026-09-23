@@ -1,5 +1,5 @@
 (ns kotoba.esim-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kotoba.esim :as esim]))
 
 ;; Fixtures. The ICCIDs below are synthetic: 89-prefixed, correct length, and
